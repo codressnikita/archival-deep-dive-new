@@ -37,6 +37,7 @@ const Hero = ({ videoSrc, isFocused, overlayOpts = {} }) => {
         mainOpacity={0}
         {...overlayOpts}
       />
+      {/** */}
     </section>
   );
 };
