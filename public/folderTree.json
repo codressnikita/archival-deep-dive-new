@@ -4670,16 +4670,16 @@
           "thumbnail": "./icons/app icons-14.svg",
           "files": [
             {
-              "name": "Copy of Origins.mov",
+              "name": "Copy of Origins.mp4",
               "type": "video",
               "thumbnail": "",
-              "src": "./documents/Pre 1950/Videos/Copy of Origins.mov"
+              "src": "./documents/Pre 1950/Videos/Copy of Origins.mp4"
             },
             {
-              "name": "Copy of Signing of the constitution.mov",
+              "name": "Copy of Signing of the constitution.mp4",
               "type": "video",
               "thumbnail": "",
-              "src": "./documents/Pre 1950/Videos/Copy of Signing of the constitution.mov"
+              "src": "./documents/Pre 1950/Videos/Copy of Signing of the constitution.mp4"
             }
           ],
           "folders": []
