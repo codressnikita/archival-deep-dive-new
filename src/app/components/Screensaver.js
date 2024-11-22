@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useScreensaverContext } from "../ScreensaverContext";
 
-const Screensaver = ({ idleTimeout = 1000 }) => {
+const Screensaver = ({ idleTimeout = 100000 }) => {
   const { screensaverDisabled } = useScreensaverContext();
   const [isIdle, setIsIdle] = useState(false);
 

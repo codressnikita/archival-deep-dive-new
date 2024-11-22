@@ -21,10 +21,14 @@ const getColorFromName = (name) => {
 };
 
 function ContentCard({ name, type, src, thumbnail, handleClick }) {
-  // Use thumbnail if provided, fallback to src for images, or a pastel color for other types
-  const bgImage = thumbnail || (type === "image" ? src : undefined);
+  const formattedSrc = src.replace(/ /g, "%20");
+  const formattedThumbnail = thumbnail.replace(/ /g, "%20");
+  const bgImage =
+    formattedThumbnail.replace(/ /g, "%20") ||
+    (type === "image" ? formattedSrc.replace(/ /g, "%20") : undefined);
   const bgColor = getColorFromName(name);
   console.log({ bgImage, bgColor });
+
   // Determine the correct icon based on the type
   const getIcon = () => {
     switch (type) {

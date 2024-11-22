@@ -55,7 +55,7 @@ export default function DocumentExplorer({ initialFolderStructure }) {
 
   return (
     <div className="min-h-screen h-full w-full p-12 relative">
-      <div className="p-6 bg-white bg-opacity-50 backdrop-blur-3xl rounded-lg mx-6 mt-6 z-10">
+      <div className="p-6 bg-gray-200 bg-opacity-50 backdrop-blur-3xl rounded-lg mx-6 mt-6 z-10 h-full">
         {/* Page Header */}
         <h1 className="text-left text-3xl font-semibold mb-6 text-gray-800">
           Archival Deep Dive
@@ -85,37 +85,40 @@ export default function DocumentExplorer({ initialFolderStructure }) {
         </nav>
 
         {/* Folder and File Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          {/* Folders */}
-          {currentFolder.folders &&
-            currentFolder.folders.map((folder) => (
-              <div
-                key={folder.name}
-                onClick={() => handleFolderClick(folder)}
-                className="flex flex-col items-center justify-center bg-blue-100 border border-blue-300 rounded-lg p-4 cursor-pointer hover:bg-blue-200"
-              >
-                <img
-                  src={folder.thumbnail || defaultFolderIconSrc}
-                  alt={folder.name}
-                  className="w-32 h-32 object-cover rounded-md"
-                />
-                <span className="mt-2 text-sm font-medium text-gray-700 truncate">
-                  {folder.name}
-                </span>
-              </div>
-            ))}
+        <div className="grid-container max-h-[70vh] overflow-y-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {/* Folders */}
+            {currentFolder.folders &&
+              currentFolder.folders.map((folder) => (
+                <div
+                  key={folder.name}
+                  onClick={() => handleFolderClick(folder)}
+                  className="flex flex-col items-center justify-center bg-gray-100 border border-gray-300 rounded-lg p-4 cursor-pointer hover:bg-blue-200"
+                >
+                  <img
+                    src={folder.thumbnail || defaultFolderIconSrc}
+                    alt={folder.name}
+                    className="w-32 h-32 object-cover rounded-md"
+                  />
+                  <span className="mt-2 text-sm font-medium text-gray-700 truncate">
+                    {folder.name}
+                  </span>
+                </div>
+              ))}
 
-          {/* Files */}
-          {currentFolder.files &&
-            currentFolder.files.map((file) => (
-              <ContentCard
-                key={file.name}
-                name={file.name}
-                type={file.type}
-                src={file.src}
-                handleClick={() => handleContentClick(file)}
-              />
-            ))}
+            {/* Files */}
+            {currentFolder.files &&
+              currentFolder.files.map((file) => (
+                <ContentCard
+                  key={file.name}
+                  name={file.name}
+                  type={file.type}
+                  src={file.src}
+                  thumbnail={file.thumbnail}
+                  handleClick={() => handleContentClick(file)}
+                />
+              ))}
+          </div>
         </div>
       </div>
 

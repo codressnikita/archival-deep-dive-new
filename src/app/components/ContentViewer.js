@@ -6,6 +6,8 @@ import { ChevronsLeft } from "lucide-react";
 const ContentViewer = ({ name, type, src, onClose }) => {
   const { setScreensaverDisabled } = useScreensaverContext();
 
+  const formattedSrc = src.replace(/ /g, "%20");
+
   useEffect(() => {
     // Disable screensaver when component mounts
     setScreensaverDisabled(true);
@@ -28,7 +30,7 @@ const ContentViewer = ({ name, type, src, onClose }) => {
             <iframe src={src} className="w-full h-full" title={name} />
           ) : type === "image" ? (
             <img
-              src={src}
+              src={formattedSrc}
               alt={name}
               className="w-full h-auto object-contain"
             />
