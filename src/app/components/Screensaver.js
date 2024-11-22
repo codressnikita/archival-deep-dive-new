@@ -47,7 +47,7 @@ const quotes = [
   },
 ];
 
-const Screensaver = ({ idleTimeout = 90000, quoteInterval = 5000 }) => {
+const Screensaver = ({ idleTimeout = 100000, quoteInterval = 5000 }) => {
   const { screensaverDisabled, setScreensaverDisabled } =
     useScreensaverContext();
   const [isIdle, setIsIdle] = useState(false);
@@ -96,7 +96,7 @@ const Screensaver = ({ idleTimeout = 90000, quoteInterval = 5000 }) => {
           <video
             className="w-full h-full object-cover"
             src="./screensaver.mp4"
-            autoPlay
+            autoPlayd
             loop
             muted
             playsInline
