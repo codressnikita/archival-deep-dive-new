@@ -3819,62 +3819,62 @@
           ]
         },
         {
-          "name": "Misc.",
+          "name": "Misc",
           "thumbnail": "./icons/app icons-17.svg",
           "files": [
             {
               "name": "03_12_1948.jpg",
               "type": "image",
-              "thumbnail": "./documents/Pre 1950/Misc./03_12_1948.jpg",
-              "src": "./documents/Pre 1950/Misc./03_12_1948.jpg"
+              "thumbnail": "./documents/Pre 1950/Misc/03_12_1948.jpg",
+              "src": "./documents/Pre 1950/Misc/03_12_1948.jpg"
             },
             {
               "name": "Assamese_ Jagaran- January 1947-1st year-1st issue.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Assamese_ Jagaran- January 1947-1st year-1st issue.jpg",
-              "src": "./documents/Pre 1950/Misc./Assamese_ Jagaran- January 1947-1st year-1st issue.pdf"
+              "src": "./documents/Pre 1950/Misc/Assamese_ Jagaran- January 1947-1st year-1st issue.pdf"
             },
             {
               "name": "Copy of Fraud On The Constitution Crumbling Of The Fundamental Law-Sep 16, 1994-FP.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of Fraud On The Constitution Crumbling Of The Fundamental Law-Sep 16, 1994-FP.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of Fraud On The Constitution Crumbling Of The Fundamental Law-Sep 16, 1994-FP.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of Fraud On The Constitution Crumbling Of The Fundamental Law-Sep 16, 1994-FP.pdf"
             },
             {
               "name": "Copy of Indian and u.s.Constitutions Have many Common Features-Aug 15, 1953-FP.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of Indian and u.s.Constitutions Have many Common Features-Aug 15, 1953-FP.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of Indian and u.s.Constitutions Have many Common Features-Aug 15, 1953-FP.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of Indian and u.s.Constitutions Have many Common Features-Aug 15, 1953-FP.pdf"
             },
             {
               "name": "Copy of J.J. School Of Art-Jan 24, 1955.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of J.J. School Of Art-Jan 24, 1955.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of J.J. School Of Art-Jan 24, 1955.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of J.J. School Of Art-Jan 24, 1955.pdf"
             },
             {
               "name": "Copy of MILESTONES after MIDNIGHT-Aug 14, 2010.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of MILESTONES after MIDNIGHT-Aug 14, 2010.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of MILESTONES after MIDNIGHT-Aug 14, 2010.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of MILESTONES after MIDNIGHT-Aug 14, 2010.pdf"
             },
             {
               "name": "Copy of No threat to fundamental rights says Indira-Aug 12, 1971-FP.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of No threat to fundamental rights says Indira-Aug 12, 1971-FP.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of No threat to fundamental rights says Indira-Aug 12, 1971-FP.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of No threat to fundamental rights says Indira-Aug 12, 1971-FP.pdf"
             },
             {
               "name": "Copy of ROLE OF PRESS UNDER NEW CONSTITUTION VICE -PRESIDENT_S PLEA TO RAISE PEOPLE_S LEVEL-Sep 17, 1952-FP.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of ROLE OF PRESS UNDER NEW CONSTITUTION VICE -PRESIDENT_S PLEA TO RAISE PEOPLE_S LEVEL-Sep 17, 1952-FP.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of ROLE OF PRESS UNDER NEW CONSTITUTION VICE -PRESIDENT_S PLEA TO RAISE PEOPLE_S LEVEL-Sep 17, 1952-FP.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of ROLE OF PRESS UNDER NEW CONSTITUTION VICE -PRESIDENT_S PLEA TO RAISE PEOPLE_S LEVEL-Sep 17, 1952-FP.pdf"
             },
             {
               "name": "Copy of SA delegation in India to study Constitution-Nov 28, 1995.pdf",
               "type": "document",
               "thumbnail": "./thumbnails/Copy of SA delegation in India to study Constitution-Nov 28, 1995.jpg",
-              "src": "./documents/Pre 1950/Misc./Copy of SA delegation in India to study Constitution-Nov 28, 1995.pdf"
+              "src": "./documents/Pre 1950/Misc/Copy of SA delegation in India to study Constitution-Nov 28, 1995.pdf"
             }
           ],
           "folders": []
