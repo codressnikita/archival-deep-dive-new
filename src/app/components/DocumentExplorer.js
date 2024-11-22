@@ -38,6 +38,11 @@ export default function DocumentExplorer({ initialFolderStructure }) {
     setSelectedContent(null);
   };
 
+  const handleHomeClick = () => {
+    setSelectedContent(null);
+    handleBreadcrumbClick(0);
+  };
+
   const handleBack = () => {
     if (path.length > 1) {
       const newPath = path.slice(0, -1);
@@ -129,9 +134,15 @@ export default function DocumentExplorer({ initialFolderStructure }) {
           type={selectedContent.type}
           src={selectedContent.src}
           onClose={handleCloseViewer}
+          onHome={handleHomeClick}
         />
       )}
-      {path.length > 1 && <BackButton onClick={handleBack} />}
+      {path.length > 1 && (
+        <BackButton
+          onBack={selectedContent ? handleCloseViewer : handleBack}
+          onHome={handleHomeClick}
+        />
+      )}
     </div>
   );
 }
