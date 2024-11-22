@@ -5,7 +5,7 @@ import BackButton from "./BackButton"; // Import BackButton
 import ContentCard from "./ContentCard"; // Import ContentCard
 import ContentViewer from "./ContentViewer"; // Import ContentViewer
 
-const defaultFolderIconSrc = "./icons/app icons-09.svg";
+const defaultFolderIconSrc = "./icons/app icons-05.svg";
 
 export default function DocumentExplorer({ initialFolderStructure }) {
   const [currentFolder, setCurrentFolder] = useState(initialFolderStructure);
@@ -97,7 +97,7 @@ export default function DocumentExplorer({ initialFolderStructure }) {
                 <img
                   src={folder.thumbnail || defaultFolderIconSrc}
                   alt={folder.name}
-                  className="w-16 h-16 object-cover rounded-md"
+                  className="w-32 h-32 object-cover rounded-md"
                 />
                 <span className="mt-2 text-sm font-medium text-gray-700 truncate">
                   {folder.name}
