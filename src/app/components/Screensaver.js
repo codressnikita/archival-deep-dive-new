@@ -47,7 +47,7 @@ const quotes = [
   },
 ];
 
-const Screensaver = ({ idleTimeout = 15000, quoteInterval = 5000 }) => {
+const Screensaver = ({ idleTimeout = 90000, quoteInterval = 5000 }) => {
   const { screensaverDisabled, setScreensaverDisabled } =
     useScreensaverContext();
   const [isIdle, setIsIdle] = useState(false);
