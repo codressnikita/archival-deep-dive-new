@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useScreensaverContext } from "../ScreensaverContext";
 
-const Screensaver = ({ idleTimeout = 1000 }) => {
+const Screensaver = ({ idleTimeout = 100000 }) => {
   const { screensaverDisabled } = useScreensaverContext();
   const [isIdle, setIsIdle] = useState(false);
 
@@ -45,14 +45,10 @@ const Screensaver = ({ idleTimeout = 1000 }) => {
             playsInline
           />
           {/* Overlay */}
-          {/* Logo */}
-          {/* <img
-              src="./logo.png"
-              alt="Logo"
-              className="w-[50%] max-w-[500px] mb-12"
-            /> */}
           {/* Main Title */}
-          <h1 className="text-5xl font-bold text-white">Archival Deep Dive</h1>
+          <h1 className="absolute text-center left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-gray-900">
+            Archival <span className="text-yellow-500">Deep-dive</span>
+          </h1>
         </div>
       )}
     </>
