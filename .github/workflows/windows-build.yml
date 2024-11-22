@@ -3,7 +3,7 @@ name: Windows Build Tauri App
 on:
   push:
     branches:
-      - stop
+      - main
 
 permissions:
   contents: write # Ensure the workflow can write contents (e.g., create releases)
