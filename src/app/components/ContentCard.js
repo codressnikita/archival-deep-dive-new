@@ -21,11 +21,7 @@ const getColorFromName = (name) => {
 };
 
 function ContentCard({ name, type, src, thumbnail, handleClick }) {
-  const formattedSrc = src.replace(/ /g, "%20");
-  const formattedThumbnail = thumbnail.replace(/ /g, "%20");
-  const bgImage =
-    formattedThumbnail.replace(/ /g, "%20") ||
-    (type === "image" ? formattedSrc.replace(/ /g, "%20") : undefined);
+  const bgImage = thumbnail || (type === "image" ? src : undefined);
   const bgColor = getColorFromName(name);
   console.log({ bgImage, bgColor });
 
