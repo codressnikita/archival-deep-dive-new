@@ -5,6 +5,8 @@ import BackButton from "./BackButton"; // Import BackButton
 import ContentCard from "./ContentCard"; // Import ContentCard
 import ContentViewer from "./ContentViewer"; // Import ContentViewer
 
+const defaultFolderIconSrc = "./icons/app icons-09.svg";
+
 export default function DocumentExplorer({ initialFolderStructure }) {
   const [currentFolder, setCurrentFolder] = useState(initialFolderStructure);
   const [path, setPath] = useState([initialFolderStructure.name]);
@@ -53,8 +55,6 @@ export default function DocumentExplorer({ initialFolderStructure }) {
 
   return (
     <div className="min-h-screen h-full w-full p-12 relative">
-      {path.length > 1 && <BackButton onClick={handleBack} />}
-
       <div className="p-6 bg-white bg-opacity-50 backdrop-blur-3xl rounded-lg mx-6 mt-6 z-10">
         {/* Page Header */}
         <h1 className="text-left text-3xl font-semibold mb-6 text-gray-800">
@@ -94,9 +94,11 @@ export default function DocumentExplorer({ initialFolderStructure }) {
                 onClick={() => handleFolderClick(folder)}
                 className="flex flex-col items-center justify-center bg-blue-100 border border-blue-300 rounded-lg p-4 cursor-pointer hover:bg-blue-200"
               >
-                <div className="w-16 h-16 bg-blue-300 rounded-full flex items-center justify-center text-white">
-                  📁
-                </div>
+                <img
+                  src={folder.thumbnail || defaultFolderIconSrc}
+                  alt={folder.name}
+                  className="w-16 h-16 object-cover rounded-md"
+                />
                 <span className="mt-2 text-sm font-medium text-gray-700 truncate">
                   {folder.name}
                 </span>
@@ -126,6 +128,7 @@ export default function DocumentExplorer({ initialFolderStructure }) {
           onClose={handleCloseViewer}
         />
       )}
+      {path.length > 1 && <BackButton onClick={handleBack} />}
     </div>
   );
 }

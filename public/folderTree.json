@@ -5,7 +5,7 @@
   "folders": [
     {
       "name": "Post 1950",
-      "thumbnail": "",
+      "thumbnail": "./icons/app icons-18.svg",
       "files": [],
       "folders": [
         {
@@ -1681,12 +1681,12 @@
     },
     {
       "name": "Pre 1950",
-      "thumbnail": "",
+      "thumbnail": "./icons/app icons-06.svg",
       "files": [],
       "folders": [
         {
           "name": "Adoption of the Constitution",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-24.svg",
           "files": [],
           "folders": [
             {
@@ -1865,7 +1865,7 @@
         },
         {
           "name": "Constituent Assembly Correspondences",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-08.svg",
           "files": [
             {
               "name": "Copy of 1927 Demand for Swaraj Constitution - AICC Ist Inst. File No. G-47.pdf",
@@ -5196,7 +5196,7 @@
         },
         {
           "name": "Documents",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-09.svg",
           "files": [
             {
               "name": "Copy of NAI - Draft Constitution of India prepared by th Drafting Committee with unofficial annonymous notes.pdf",
@@ -5227,7 +5227,7 @@
         },
         {
           "name": "Independence",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-10.svg",
           "files": [],
           "folders": [
             {
@@ -5557,7 +5557,7 @@
         },
         {
           "name": "Origins of Constitution",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-11.svg",
           "files": [],
           "folders": [
             {
@@ -6083,7 +6083,7 @@
         },
         {
           "name": "Proceedings",
-          "thumbnail": "",
+          "thumbnail": "./icons/app icons-12.svg",
           "files": [
             {
               "name": "Copy of A rough programme of the Constituent Assembly prepared by Gopalaswami Ayyangar CL-6 Pt. I.pdf",
