@@ -44,15 +44,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cargo-
 
-      - name: Clear Cargo Cache
-        run: cargo clean && rm -rf ~/.cargo/registry ~/.cargo/git
-
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           override: true
           components: rustfmt
+
+      - name: Clean Cargo and Remove Cache
+        run: |
+          cd src-tauri  # Change this path if your Cargo.toml is elsewhere
+          cargo clean
+          rm -rf ~/.cargo/registry ~/.cargo/git
 
       - name: Build app_lib crate
         run: cargo build --release --package app_lib
