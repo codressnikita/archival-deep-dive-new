@@ -58,7 +58,9 @@ jobs:
       #     Remove-Item -Recurse -Force ~/.cargo/registry ~/.cargo/git
 
       - name: Build app_lib crate
-        run: cargo build --release --package app_lib
+        run: |
+          cd src-tauri  # Ensure this path is correct (it should be the directory with Cargo.toml)
+          cargo build --release --package app_lib
 
       - name: Build the App (Debug)
         run: |
