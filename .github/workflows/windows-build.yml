@@ -44,6 +44,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cargo-
 
+      - name: Clear Cargo Cache
+        run: cargo clean && rm -rf ~/.cargo/registry ~/.cargo/git
+
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
@@ -51,13 +54,14 @@ jobs:
           override: true
           components: rustfmt
 
-      # - name: Install Tauri CLI Dependencies
-      #   run: npm install @tauri-apps/cli @tauri-apps/api
+      - name: Build app_lib crate
+        run: cargo build --release --package app_lib
 
-      - name: Build the App
-        run: npm run tauri build
+      - name: Build the App (Debug)
+        run: |
+          cargo build --release
+          npm run tauri build --verbose
         env:
-          # Necessary for Tauri to build Windows apps
           RUSTFLAGS: "-C target-feature=+crt-static -C link-args=-s"
 
       - name: Upload Artifacts
@@ -65,33 +69,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: windows-release
-          path: src-tauri/target/release/bundle/
-
-      # - name: Check for Existing Release
-      #   id: check_release
-      #   uses: octokit/request-action@v2
-      #   with:
-      #     route: GET /repos/${{ github.repository }}/releases/tags/${{ github.ref_name }}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Create Release if None Exists
-      #   id: create_release
-      #   if: steps.check_release.outputs.status != 200
-      #   uses: octokit/request-action@v2
-      #   with:
-      #     route: POST /repos/${{ github.repository }}/releases
-      #     release_name: Release ${{ github.ref_name }} # You can customize the release name
-      #     tag_name: ${{ github.ref_name }}
-      #     body: "Release for ${{ github.ref_name }}"
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Upload EXE to Release
-      #   if: steps.check_release.outputs.status == 200 || steps.create_release.outputs.status == 201
-      #   uses: actions/upload-release-asset@v1
-      #   with:
-      #     upload_url: ${{ steps.check_release.outputs.status == 200 && steps.check_release.outputs.data.upload_url || steps.create_release.outputs.data.upload_url }}
-      #     asset_path: src-tauri/target/release/bundle/nsis/*.exe # Adjust based on your actual path
-      #     asset_name: your-app-name-${{ github.ref }}.exe
-      #     asset_content_type: application/octet-stream
+          path: src-tauri/target/release/bundle/nsis
