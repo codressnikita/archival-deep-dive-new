@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write # Ensure the workflow can write contents (e.g., create releases)
+  contents: write
 
 jobs:
   tauri-build:
@@ -34,16 +34,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Cache Cargo
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-          key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.toml', 'Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
-
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
@@ -51,23 +41,13 @@ jobs:
           override: true
           components: rustfmt
 
-      # - name: Clean Cargo and Remove Cache
-      #   run: |
-      #     cd src-tauri  # Change this path if your Cargo.toml is elsewhere
-      #     cargo clean
-      #     Remove-Item -Recurse -Force ~/.cargo/registry ~/.cargo/git
+      - name: Install Tauri CLI Dependencies
+        run: npm install @tauri-apps/cli @tauri-apps/api
 
-      - name: Build app_lib crate
-        run: |
-          cd src-tauri  # Ensure this path is correct (it should be the directory with Cargo.toml)
-          cargo build --release --package app_lib
-
-      - name: Build the App (Debug)
-        run: |
-          cargo build --release
-          npm run tauri build --verbose
+      - name: Build the App
+        run: npm run tauri build --verbose
         env:
-          RUSTFLAGS: "-C target-feature=+crt-static -C link-args=-s"
+          RUSTFLAGS: "-C target-feature=+crt-static"
 
       - name: Upload Artifacts
         if: success()
