@@ -55,7 +55,7 @@ jobs:
         run: |
           cd src-tauri  # Change this path if your Cargo.toml is elsewhere
           cargo clean
-          rm -rf ~/.cargo/registry ~/.cargo/git
+          Remove-Item -Recurse -Force ~/.cargo/registry ~/.cargo/git
 
       - name: Build app_lib crate
         run: cargo build --release --package app_lib
